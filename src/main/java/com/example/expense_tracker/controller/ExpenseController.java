@@ -29,4 +29,14 @@ public class ExpenseController {
         return expenseRepository.findById(id).orElse(null);
     }
 
+    @PutMapping("/{id}")
+    public Expense updateExpenseAmountById(@PathVariable Long id, @RequestBody Expense updatedExpense) {
+         Expense existingExpense = expenseRepository.findById(id).orElse(null);
+
+         if(existingExpense != null){
+             existingExpense.setAmount(updatedExpense.getAmount());
+             return expenseRepository.save(existingExpense);
+         }
+         return null;
+    }
 }
