@@ -39,4 +39,10 @@ public class ExpenseController {
          }
          return null;
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteExpenseById(@PathVariable Long id){
+        expenseRepository.deleteById(id);
+        return "Expense Deleted Successfully";
+    }
 }
