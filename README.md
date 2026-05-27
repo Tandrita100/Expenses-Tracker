@@ -29,7 +29,7 @@ A backend RESTful CRUD application developed using Spring Boot, Spring Data JPA,
 
 ## Project Structure
 
-expense-tracker
+```expense-tracker
 │
 ├── controller
 │ └── ExpenseController
@@ -43,6 +43,7 @@ expense-tracker
 ├── ExpenseTrackerApplication
 │
 └── application.properties
+```
 
 ---
 
